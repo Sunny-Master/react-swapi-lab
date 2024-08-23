@@ -4,11 +4,11 @@ const NavBar = () => {
   return (
     <header>
       <nav>
-        <h1>STAR WARS STARSHIPS</h1>
-        {/* < Link to="/">STAR WARS STARSHIPS</Link> */}
+        <Link to="/">
+          <h1>STAR WARS STARSHIPS</h1>
+        </Link> 
       </nav>
     </header>
-    
   )
 }
 

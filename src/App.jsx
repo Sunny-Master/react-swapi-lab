@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 
 // pages
 import Starships from './pages/Starships/Starships'
+import StarshipDetails from './pages/StarshipDetails/StarshipDetails'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -15,10 +16,10 @@ function App() {
   return (
     <>
       <NavBar />
-      <Starships />
-      {/* <Routes>
+      <Routes>
         <Route path='/' element={<Starships />}/>
-      </Routes> */}
+        <Route path='/starships/:starshipId' element={<StarshipDetails />}/>
+      </Routes>
     </>
   )
 }
