@@ -24,10 +24,33 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  text-align: center;
+}
+
+.starship-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 75px;
+  padding: 10px;
+  /* max-width: 1200px; */
+}
+
+.starship-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 100px;
+  border: 1px solid white;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.starship-card > h2 {
+  margin: 5px;
 }
 
 h1 {
