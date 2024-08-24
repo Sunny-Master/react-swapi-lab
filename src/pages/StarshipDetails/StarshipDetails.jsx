@@ -1,7 +1,13 @@
 // npm modules
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
+import { Link } from "react-router-dom"
+
+// services
 import { getStarshipDetails } from "../../services/api-calls"
+
+// components
+import StarshipPilots from "../../components/StarshipPilots/StarshipPilots"
 
 const StarshipDetails = () => {
   const [starshipDetails, setStarshipDetails] = useState({})
@@ -27,6 +33,17 @@ const StarshipDetails = () => {
           <div className="line-detail">
             <label>MODEL: </label>
             <p>{starshipDetails.model}</p>
+          </div>
+          <div className="line-detail">
+            <label>PILOTS: </label>
+            {starshipDetails.pilots.length ? 
+              <StarshipPilots pilotUrls={starshipDetails.pilots}/>
+              :
+              <p>No Pilots</p>
+            }
+          </div>
+          <div className="line-detail back-button">
+            <Link to="/">RETURN</Link>
           </div>
       </div>
     </div>
